@@ -24,6 +24,10 @@ body {
 	padding-right: 36px;
 	width: 140px;
 	padding-top: 8px;
+	position: absolute;	
+	right: 0;
+	top: 8px;
+
 }
 
 .menu-opcoes ul {
