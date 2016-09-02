@@ -1,4 +1,17 @@
 
+document.querySelector('#form-busca').onsubmit = function() {
+	if (document.querySelector('#q').value == '') {
+		document.querySelector('#q').style.background = 'pink';
+		return false;
+	}
+};
+
+document.querySelector('#q').onfocus = function() {
+	document.querySelector('#q').style.background = 'white';
+}
+
+
+
 var banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
 var bannerAtual = 0;
 
@@ -7,8 +20,15 @@ function trocaBanner() {
 	document.querySelector('.destaque img').src = banners[bannerAtual];
 }
 
-var teste = setInterval(trocaBanner, 2000);
-
-function stopBanner() {
-	clearInterval(teste);
-}
+var timer = setInterval(trocaBanner, 2000);
+var controle = document.querySelector('.pause');
+controle.onclick = function() {
+	if (controle.className == 'pause') {
+		clearInterval(timer);
+		controle.className = 'play';
+	} else {
+		timer = setInterval(trocaBanner, 2000);
+		controle.className = 'pause';
+	}
+	return false;
+};
