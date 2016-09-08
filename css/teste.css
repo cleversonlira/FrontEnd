@@ -1,0 +1,28 @@
+body {
+	height: 100%;
+	width: 100%;
+}
+
+section {
+	width: 90%;
+	height: 90%;
+}
+
+div {
+	width: 500px;
+	height: 500px;
+}
+
+img {
+	margin-left: 50%;
+	position: relative;		
+	background: red;	
+	transition: 2.0s ease-out;	
+}
+
+img:hover {	
+	margin-left: 50%;
+	transition: 1.7s ease-in;
+	transform: skew(20deg) scale(1.6);
+}
+/*5485*/
